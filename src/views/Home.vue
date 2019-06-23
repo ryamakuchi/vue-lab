@@ -12,6 +12,9 @@
 
     <h3>イベントハンドリング</h3>
     <el-button @click="onClick">onClick</el-button>
+
+    <h3>算出プロパティ</h3>
+    <p>{{ computedMsg }}</p>
   </div>
 </template>
 
@@ -43,6 +46,11 @@ export default Vue.extend({
           name: "マウス"
         }
       ] as Item[]
+    }
+  },
+  computed: {
+    computedMsg(): string {
+      return this.message.replace(/!/g, "") + " + TypeScript!"
     }
   },
   methods: {
