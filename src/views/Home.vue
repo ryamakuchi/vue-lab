@@ -9,6 +9,9 @@
         {{item.name}}
       </li>
     </ul>
+
+    <h3>イベントハンドリング</h3>
+    <button @click="onClick">onClick</button>
   </div>
 </template>
 
@@ -40,6 +43,11 @@ export default Vue.extend({
           name: "マウス"
         }
       ] as Item[]
+    }
+  },
+  methods: {
+    onClick(): void {
+      alert(this.message);
     }
   }
 });
