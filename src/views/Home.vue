@@ -15,6 +15,14 @@
 
     <h3>算出プロパティ</h3>
     <p>{{ computedMsg }}</p>
+
+    <h3>条件付きレンダリング</h3>
+    <button @click="showDetail">
+      {{ detail ? '非表示' : '表示' }}
+    </button>
+    <div v-show="detail">
+      詳細が表示されました。
+    </div>
   </div>
 </template>
 
@@ -45,7 +53,8 @@ export default Vue.extend({
           id: 2,
           name: "マウス"
         }
-      ] as Item[]
+      ] as Item[],
+      detail: false
     }
   },
   computed: {
@@ -56,6 +65,9 @@ export default Vue.extend({
   methods: {
     onClick(): void {
       alert(this.message);
+    },
+    showDetail(): void {
+      this.detail = !this.detail
     }
   }
 });
