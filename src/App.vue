@@ -18,6 +18,10 @@
           <el-menu-item>
             <router-link to="/form">Form</router-link>
           </el-menu-item>
+
+          <el-menu-item>
+            <router-link to="/translator">Translator</router-link>
+          </el-menu-item>
         </el-menu>
       </el-aside>
 
@@ -29,13 +33,8 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
+  name: 'app'
 }
 </script>
 
