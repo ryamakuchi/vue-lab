@@ -11,7 +11,7 @@
     </ul>
 
     <h3>イベントハンドリング</h3>
-    <button @click="onClick">onClick</button>
+    <el-button @click="onClick">onClick</el-button>
   </div>
 </template>
 
