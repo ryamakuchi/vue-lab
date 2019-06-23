@@ -1,5 +1,7 @@
 <template>
   <div class="table">
+    <h1>テーブルの実装</h1>
+
     <el-table
       :data="noteBooks"
       :default-sort="{prop: 'id', order: 'ascending'}"

@@ -1,6 +1,6 @@
 <template>
   <div class="translator">
-    <h2>Translatorの実装</h2>
+    <h1>Translator の実装</h1>
 
     <el-row :gutter="40">
       <el-col :span="12">

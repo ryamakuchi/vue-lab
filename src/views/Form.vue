@@ -1,10 +1,10 @@
 <template>
   <div class="form">
-    <h2>フォームの実装</h2>
+    <h1>フォームの実装</h1>
 
     <el-row :gutter="20">
       <el-col :span="12">
-        <h3>フォーム</h3>
+        <h2>フォーム</h2>
 
         <el-form ref="form" :model="request" label-width="120px">
           <el-form-item label="タイトル">
@@ -37,7 +37,7 @@
       </el-col>
 
       <el-col :span="6" :offset="2">
-        <h3>プレビュー</h3>
+        <h2>プレビュー</h2>
         <ul>
           <li>タイトル: {{ request.title }}</li>
           <li>種別: {{ request.type }}</li>

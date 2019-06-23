@@ -3,30 +3,30 @@
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld :msg="message"/>
 
-    <h3>リストレンダリング</h3>
+    <h2>リストレンダリング</h2>
     <ul id="item-list">
       <li v-for="item in items" :key="item.id">
         {{item.name}}
       </li>
     </ul>
 
-    <h3>イベントハンドリング</h3>
+    <h2>イベントハンドリング</h2>
     <el-button @click="onClick">onClick</el-button>
 
-    <h3>算出プロパティ</h3>
+    <h2>算出プロパティ</h2>
     <p>{{ computedMsg }}</p>
 
-    <h3>条件付きレンダリング</h3>
-    <button @click="showDetail">
+    <h2>条件付きレンダリング</h2>
+    <el-button @click="showDetail">
       {{ detail ? '非表示' : '表示' }}
-    </button>
+    </el-button>
     <div v-show="detail">
       詳細が表示されました。
     </div>
 
-    <button @click="raiseError">
+    <el-button @click="raiseError">
       {{ hasError ? 'エラー解除' : 'エラーを起こす' }}
-    </button>
+    </el-button>
     <div
       class="el-alert is-light"
       :class="{ 'el-alert--error': hasError }">
