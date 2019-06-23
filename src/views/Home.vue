@@ -23,6 +23,15 @@
     <div v-show="detail">
       詳細が表示されました。
     </div>
+
+    <button @click="raiseError">
+      {{ hasError ? 'エラー解除' : 'エラーを起こす' }}
+    </button>
+    <div
+      class="el-alert is-light"
+      :class="{ 'el-alert--error': hasError }">
+      {{ hasError ? 'Error!!!' : 'no problem' }}
+    </div>
   </div>
 </template>
 
@@ -54,7 +63,8 @@ export default Vue.extend({
           name: "マウス"
         }
       ] as Item[],
-      detail: false
+      detail: false,
+      hasError: false
     }
   },
   computed: {
@@ -68,6 +78,9 @@ export default Vue.extend({
     },
     showDetail(): void {
       this.detail = !this.detail
+    },
+    raiseError(): void {
+      this.hasError = !this.hasError
     }
   }
 });
